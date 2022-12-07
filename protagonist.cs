@@ -23,12 +23,16 @@ public class PlayerCtrl : MonoBehaviour
     private float v = 0.0f;
     private float r = 0.0f;
 
-    private float moveSpeed = 10.0f;
+    private float moveSpeed = 10.0f;                //이동속도
+    private float actSpeed = 10.0f;                 //행동속도
     private string status_active = "idle";
     //상태 walk, run, dodge, act, faint, down
     private string status_passive= "normal"
     //상태 normal, hit
     private void skill = { }
+
+    private string weapon1;
+    private string weapon2;
 
     private void boneSword =
     {
