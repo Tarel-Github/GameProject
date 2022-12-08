@@ -56,8 +56,24 @@ public class PlayerCtrl : MonoBehaviour
     public PlayerAnim playerAnim;// Inspector 뷰에 표시할 애니메이션 클래스 변수
     public Animation anim;// Animation 컴포넌트를 저장하기 위한 변수
 
+//======================================================================
+private float totalPositive = 0f;
+private float totalNegative = 0f;
+private float facePositive = 0f;    //가벼운 긍정적인 심정, 양수면 단순히 기분좋음, 음수면
+private float deepPositive = 0f;    //깊은 긍정적인 심정, 절대값이 크면 성격에 크게 반영됌, 
+private float faceNegative = 0f;    //가벼운 부정적인 심정, 양수면 단순히 짜증남, 음수면 기분은 나쁘나 화내기 어려운 상황
+private float deepNegative = 0f;    //깊은 부정적인 심정, 양수면
+private float forWho = 0f;          //양수는 이타적, 음수는 이기적
+private float greed = 0f;           //욕심지수, 양수면 가까이하고 싶고 음수면 멀리 하고 싶음,
+private float act = 0f;             //행동지수, 양수면 능동적, 음수면 수동적
 
-    void Start()
+private int countForWhoUp = 0;      //이타적이었던 횟수
+private int countForWhoDown = 0;    //이기적이었던 횟수
+
+private int 
+
+
+void Start()
     {
 
     }
@@ -65,6 +81,6 @@ public class PlayerCtrl : MonoBehaviour
 
     void Update()
     {
-      
+     
     }
 }
