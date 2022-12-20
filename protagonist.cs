@@ -19,9 +19,11 @@ public class PlayerAnim//왼쪽은 변수가아닌 플레이어 에니메이션 실행 함수
 
 public class PlayerCtrl : MonoBehaviour
 {
+    //필요한 변수목록
     private float h = 0.0f;
     private float v = 0.0f;
     private float r = 0.0f;
+
 
     private float moveSpeed = 10.0f;                //이동속도
     private float actSpeed = 10.0f;                 //행동속도
@@ -30,6 +32,7 @@ public class PlayerCtrl : MonoBehaviour
     private string status_passive= "normal"
     //상태 normal, hit
     private void skill = { }
+
 
     private string weapon1;
     private string weapon2;
@@ -60,9 +63,9 @@ public class PlayerCtrl : MonoBehaviour
 private float totalPositive = 0f;
 private float totalNegative = 0f;
 private float facePositive = 0f;    //가벼운 긍정적인 심정, 양수면 단순히 기분좋음, 음수면
-private float deepPositive = 0f;    //깊은 긍정적인 심정, 절대값이 크면 성격에 크게 반영됌, 
+private float deepPositive = 0f;    //깊은 긍정적인 심정, 절대값이 크면 성격이나 대상에 대한 인식이 크게 반영됌, 양수면 은혜감정이 생김, 음수면 배신감을 느낌
 private float faceNegative = 0f;    //가벼운 부정적인 심정, 양수면 단순히 짜증남, 음수면 기분은 나쁘나 화내기 어려운 상황
-private float deepNegative = 0f;    //깊은 부정적인 심정, 양수면
+private float deepNegative = 0f;    //깊은 부정적인 심정, 절대값이 크면 성격이나 대상에 대한 인식이 크게 반영됌, 양수면 증오나 원한이 생김, 음수면 용서함
 private float forWho = 0f;          //양수는 이타적, 음수는 이기적
 private float greed = 0f;           //욕심지수, 양수면 가까이하고 싶고 음수면 멀리 하고 싶음,
 private float act = 0f;             //행동지수, 양수면 능동적, 음수면 수동적
