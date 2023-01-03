@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -73,7 +74,84 @@ private float act = 0f;             //행동지수, 양수면 능동적, 음수면 수동적
 private int countForWhoUp = 0;      //이타적이었던 횟수
 private int countForWhoDown = 0;    //이기적이었던 횟수
 
-private int 
+
+
+//클래스 미리 복사해두기
+class Terran
+{
+    protected int _HP;
+    protected int _ATK;
+    protected int _Speed;
+    protected int _Cost;
+    public virtual void Run()
+    {
+        Console.Write("{0}의 속도로 ", _Speed);
+    }
+
+    public virtual void Attack()
+    {
+        Console.WriteLine();
+
+        if (this is FireBat)
+        {
+            Console.Write("근거리 공격력: {0} ", _ATK);
+        }
+        else
+        {
+            Console.Write("원거리 공격력: {0} ", _ATK);
+        }
+    }
+}
+
+class Marine : Terran
+{
+    public Marine()
+    {
+        _HP = 40;
+        _ATK = 6;
+        _Speed = 100;
+        _Cost = 50;
+    }
+
+    public override void Run()
+    {
+        base.Run();
+        Console.WriteLine("마린이 달린다.");
+    }
+
+    public override void Attack()
+    {
+        base.Attack();
+
+        Console.WriteLine("마린의 총격! ");
+    }
+}
+
+class FireBat : Terran
+{
+    public FireBat()
+    {
+        _HP = 50;
+        _ATK = 16;
+        _Speed = 100;
+        _Cost = 75;
+    }
+
+    public override void Run()
+    {
+        base.Run();
+        Console.WriteLine("파뱃이 달린다.");
+    }
+
+    public override void Attack()
+    {
+        base.Attack();
+        Console.WriteLine("파뱃의 화염공격! ");
+    }
+}
+
+
+
 
 
 void Start()
